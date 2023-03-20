@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { AiFillFire, AiFillStar } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
 import ListOfMovies from "../components/ListOfMovies";
 import getMovieList from "../services/getMovieList";
 
@@ -28,15 +27,16 @@ function Home() {
       <Helmet>
         <title>Epic Movie | Home</title>
       </Helmet>
-      <div className="bg-black text-white ">
-        <Header />
-        <div className="flex justify-around m-3 h-6">
-          <button className="flex gap-1 items-center  hover:border-b-slate-50 hover:border-b-2" onClick={() => setSearch('popular')}><AiFillFire /> Popular</button>
+      <div className="bg-black text-white">
+        <div className="flex justify-around py-2 h-10">
+          <button className="flex gap-1 items-center  hover:border-b-slate-50 hover:border-b-2" onClick={() => setSearch('popular')}><AiFillFire className="text-sm" /> Popular</button>
           <button className="flex gap-1 items-center hover:border-b-2" onClick={() => setSearch('top_rated')}><AiFillStar /> Mejor valoradas</button>
         </div>
         <div className="w-full max-w-[1200px] mx-auto">
           {movies && <ListOfMovies movies={movies} />}
-          {movies && <button onClick={handlePage}>Descubre más</button>}
+          <div className="flex justify-around h-12 items-center">
+            {movies && <button className="h-6 hover:border-b-slate-50 hover:border-b-2" onClick={handlePage}>Descubre más</button>}
+          </div>
         </div>
       </div>
     </>

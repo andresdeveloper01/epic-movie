@@ -1,7 +1,6 @@
-function getMovieSearch(keywoard) {
+function getMovieSearch(keyword) {
   return fetch(
-    `https://api.themoviedb.org/3/movie/?api_key=5fe187264bbce72148a2c05da2a00942&language=en-US&query=${keywoard}&page=1
-    }`
+    `https://api.themoviedb.org/3/search/movie?api_key=5fe187264bbce72148a2c05da2a00942&language=es&query=${keyword}&page=1`
   )
     .then((res) => res.json())
     .then((res) => {
