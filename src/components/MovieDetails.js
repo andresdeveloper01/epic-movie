@@ -14,7 +14,7 @@ const MovieDetails = ({ details, backPage }) => {
     useEffect(() => {
         getMovieVideo(id).then(setVideo)
     }, [id])
-    console.log(details);
+    
     const horas = Math.floor(details.runtime / 60);
     const minutosRestantes = details.runtime % 60;
 
