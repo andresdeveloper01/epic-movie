@@ -1,6 +1,8 @@
+import { MOVIEDB_API_KEY } from "./apiKey";
+
 function getMovieList(search, page) {
   return fetch(
-    `https://api.themoviedb.org/3/movie/${search}?api_key=5fe187264bbce72148a2c05da2a00942&language=es-MX&page=${page || 1}`
+    `https://api.themoviedb.org/3/movie/${search}?api_key=${MOVIEDB_API_KEY}&language=es-MX&page=${page || 1}`
   )
     .then((res) => res.json())
     .then((res) => {
