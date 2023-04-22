@@ -5,7 +5,7 @@ import imageNotFound from "../assets/imageNotFound.png"
 const CardMovie = ({ id, poster_path, title, release_date, vote_average }) => {
   const navigate = useNavigate()
   return (
-    <div onClick={() => navigate(`/details/${id}`)} className="cursor-pointer h-auto bg-[#1a1a1a]  w-[180px] rounded-b mb-2" id={id}>
+    <div onClick={() => navigate(`/details/${id}`)} className="cursor-pointer h-auto bg-[#1a1a1a]  w-3/4 rounded-b mb-2" id={id}>
       {poster_path ? <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} /> : <img src={imageNotFound} alt="img not found" />}
       <div className="m-1 flex items-center gap-1">
         <AiFillStar className="text-yellow-500 w-4" />
