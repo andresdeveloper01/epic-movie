@@ -11,9 +11,9 @@ La pagina cuenta con un home donde hay una pestaña de peliculas populares y otr
 
 ### Screenshots
 
-![Home](./photos/home.png)
+![Home](./photos/home.webp)
 
-![Details](./photos/details.png)
+![Details](./photos/details.webp)
 
 ### Link to the page
 
