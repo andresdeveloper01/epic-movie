@@ -19,7 +19,7 @@ const SearchedMovies = () => {
         <meta name='description' content={`Search of ${keyword}`} />
       </Helmet>
       {movies &&
-        <div className='bg-black text-white h-full'>
+        <div className='bg-black text-white h-full max-w-[1200px] mx-auto'>
           {movies.length !== 0 ? <ListOfMovies movies={movies} /> : <div className='text-center h-screen'><b><p>No hay resultados de "{keyword}"</p></b></div>}
         </div>}
     </>
